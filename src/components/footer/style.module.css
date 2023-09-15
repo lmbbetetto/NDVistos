@@ -1,0 +1,143 @@
+.container {
+    padding: 4.16rem 10rem;
+    margin-top: 6.5rem;
+
+    width: 100%;
+    background: var(--light-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.about img {
+    width: 9.0625rem;
+    height: 11.5625rem;
+}
+
+.about p {
+    width: 18.0625rem;
+    height: 10.5rem;
+
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--white);
+}
+
+.nav h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 2.19rem;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.13rem;
+
+    list-style: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.list a {
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.list a:hover {
+    opacity: 50%;
+}
+
+.contact {
+    align-self: flex-start;
+  }
+
+.contact h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 2.19rem;
+    text-align: end;
+}
+
+.contact p {
+    width: 18.0625rem;
+
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--white);
+    text-align: end;
+
+    margin-bottom: 1.13rem;
+}
+
+.icons {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    font-size: 3.06125rem;
+    margin-top: 0.03rem;
+}
+
+.icons a {
+    color: var(--white);
+}
+
+@media (max-width: 720px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about p {
+        text-align: center;
+    }
+
+    .contact {
+        align-self: auto;
+    }
+
+    .contact h1 {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .contact p {
+        text-align: center;
+    }
+
+    .icons {
+        justify-content: center;
+    }
+}

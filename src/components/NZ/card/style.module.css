@@ -1,0 +1,43 @@
+.container {
+    width: 21.375rem;
+    height: 20.0625rem;
+    background: var(--dark-blue);
+    border-radius: 1.875rem;
+
+    padding: 2.62rem 2.81rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.container p {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.container svg {
+    margin-bottom: 2rem;
+    color: var(--white);
+    width: 3.75rem;
+    height: 3.74531rem;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 20rem;
+    }
+}

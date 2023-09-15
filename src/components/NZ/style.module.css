@@ -1,0 +1,124 @@
+.cover {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/coverNZ.png) no-repeat center;
+    background-size: 100%;
+
+    width: 100%;
+    height: 23.9375rem;
+
+    padding: 4.88rem 19.31rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cover h1 {
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 3.13rem;
+}
+
+.cover p {
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    max-width: 35rem;
+}
+
+.container {
+    padding: 0 10rem;
+}
+
+.card {
+    padding: 4.44rem 1.63rem;
+    margin-top: -3.5rem;
+    width: 100%;
+    background: var(--light-blue);
+    border-radius: 1.875rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-top: 2.19rem;
+}
+
+.btn {
+    width: 6.375rem;
+    height: 2.7rem;
+    border-radius: 0.9375rem;
+    border: none;
+    margin: 0 auto;
+    background: var(--dark-blue);
+
+    color: var(--white);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 2.19rem;
+    
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    width: 10rem;
+}
+
+@media (max-width: 720px) {
+    .cover {
+        background-size: 395%;
+        padding: 0;
+    }
+
+    .cover h1 {
+        margin-top: 10rem;
+        font-size: 2.5rem;
+    }
+
+    .cover p {
+        max-width: 20rem;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        margin: 0 auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
