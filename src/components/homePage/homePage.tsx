@@ -2,16 +2,13 @@ import style from './style.module.css'
 
 import Australia from '../../assets/bandeiraAustralia.png'
 import NZ from '../../assets/bandeiraNZ.png'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 export function Home() {
     useEffect(() => {
         document.title = 'Home - N&D Vistos'
     })
-
-
-  
 
     return (
         <>
