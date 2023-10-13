@@ -1,20 +1,45 @@
 import { Link } from 'react-router-dom'
 import './style.css'
 import { AnimatedHumburguerButton } from './animatedHamburguerButton'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import LOGO from '../../assets/logo.png'
 
 import { BiLogoInstagramAlt } from 'react-icons/bi'
 import { FaFacebookSquare } from 'react-icons/fa'
 
-export function Header() {
+export const Header: React.FC<{ pageTag: string }> = ({ pageTag }) => {
 
     const [active, setActive] = useState(false)
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
+    const [visits, setVisits] = useState<number | null>(null);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`http://localhost:3001/visits/${pageTag}`);
+          const data = await response.json();
+  
+          console.log('Data from API:', data);
+  
+          setVisits(data?.visits || 0);
+  
+          if (!data.visits) {
+            await fetch(`http://localhost:3001/visits/${pageTag}`, {
+              method: 'POST'
+            });
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+  
+      fetchData();
+    }, [pageTag]);
 
     return (
         <>
@@ -27,6 +52,7 @@ export function Header() {
                         <Link to="/australia"><a>Austrália</a></Link>
                         <Link to="/sobre"><a>Sobre</a></Link>
                         <Link to="/contato"><a>Contato</a></Link>
+                        <div className='contador'><p>Visitas: {visits}</p></div>
                     </div>
                 </div>
             </header>

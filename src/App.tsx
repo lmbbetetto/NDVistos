@@ -20,7 +20,7 @@ export function App() {
 
   return (
     <Container>
-      <Header />
+      <Header pageTag="header" />
 
       <Routes>
         <Route path="/" element={<Home />} />

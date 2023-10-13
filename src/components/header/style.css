@@ -34,6 +34,14 @@
   color: var(--white);
 }
 
+.contador {
+  background: var(--white);
+  color: var(--black);
+  padding: 0.5rem;
+  margin-top: -0.3rem;
+  border-radius: 9px;
+}
+
 .nav a:hover {
   opacity: 50%;
 }
