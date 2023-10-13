@@ -76,6 +76,7 @@ export const Header: React.FC<{ pageTag: string }> = ({ pageTag }) => {
                                     <a href="/" target="_blank"><BiLogoInstagramAlt size={36} /></a>
                                     <a href="/" target="_blank"><FaFacebookSquare /></a>
                                 </div>
+                                <div className='contador'><p>Visitas: {visits}</p></div>
                             </div>
                         </div>
                     </div>
