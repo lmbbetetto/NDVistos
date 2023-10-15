@@ -19,26 +19,26 @@ export const Header: React.FC<{ pageTag: string }> = ({ pageTag }) => {
     const [visits, setVisits] = useState<number | null>(null);
 
     useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(`http://localhost:3001/visits/${pageTag}`);
-          const data = await response.json();
-  
-          console.log('Data from API:', data);
-  
-          setVisits(data?.visits || 0);
-  
-          if (!data.visits) {
-            await fetch(`http://localhost:3001/visits/${pageTag}`, {
-              method: 'POST'
-            });
-          }
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      };
-  
-      fetchData();
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`https://server-js-git-main-lmbbetetto.vercel.app/visits/${pageTag}`);
+                const data = await response.json();
+
+                console.log('Data from API:', data);
+
+                setVisits(data?.visits || 0);
+
+                if (!data.visits) {
+                    await fetch(`https://server-js-git-main-lmbbetetto.vercel.app/visits/${pageTag}`, {
+                        method: 'POST'
+                    });
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        fetchData();
     }, [pageTag]);
 
     return (
